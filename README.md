@@ -1,7 +1,7 @@
 # pitch
 
-> [pitch] is a collection of tools for working with musical pitch. It is
-> implemented in TypeScript for [Deno].
+[pitch] is a collection of tools for working with musical pitch. It is
+implemented in TypeScript for [Deno].
 
 [![License][license-shield]](LICENSE) [![Deno doc][deno-doc-shield]][deno-doc]
 [![Deno module][deno-land-shield]][deno-land]
