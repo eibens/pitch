@@ -1,4 +1,4 @@
-import * as cents from "https://raw.githubusercontent.com/eibens-utils/cents/0.0.0/mod.ts";
+import * as cents from "./cent.ts";
 
 /**
  * Converts from centitones to cents.
