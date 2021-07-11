@@ -31,12 +31,18 @@ example `69` for the pitch `A4`.
 The [MIDI Tuning Standard] (MTS) defines how MIDI numbers get converted to
 absolute frequencies. For example, A4 at [440 hz] corresponds to MIDI number 69.
 
+# [pitch.ts](pitch.ts)
+
+The `Pitch` type defines an absolute pitch with a `Letter`, `Accidental`, and
+octave `number`. The `Chroma` type defines a pitch without an octave and models
+the concept of a [pitch class].
+
 # [spn.ts](spn.ts)
 
 In [Scientific Pitch Notation] (SPN) a musical pitch is specified by combining a
 musical note name (with accidental if needed) and a number identifying the
 pitch's octave. For example, `A4`, `C#4`, and `Eb2` are valid pitches in SPN.
-Such strings can be parsed with the `parse` function:
+Such strings can be parsed with the `parse` function.
 
 ```ts
 import { parse } from "https://deno.land/x/pitch/spn.ts";
@@ -47,8 +53,7 @@ console.assert(accidental === "#");
 console.assert(octave === 4);
 ```
 
-Given a `Letter`, `Accidental`, and octave `number`, the `stringify` function
-generates an SPN string:
+Given a `Pitch` object, the `stringify` function generates an SPN string.
 
 ```ts
 import { stringify } from "https://deno.land/x/pitch/spn.ts";
@@ -70,6 +75,7 @@ console.assert(spn === "C#4");
 [MIDI tuning standard]: https://en.wikipedia.org/wiki/MIDI_tuning_standard
 [440 hz]: https://en.wikipedia.org/wiki/A440_(pitch_standard)
 [scientific pitch notation]: https://en.wikipedia.org/wiki/Scientific_pitch_notation
+[pitch class]: https://en.wikipedia.org/wiki/Pitch_class
 
 <!-- badges -->
 

@@ -1,24 +1,4 @@
-/**
- * Defines Valid pitch letters in SPN.
- */
-export type Letter = "A" | "B" | "C" | "D" | "E" | "F" | "G";
-
-/**
- * Define valid accidentals in SPN.
- *
- * Theoretically, there could be accidentals such as "bbb", or "####", but in
- * most cases these should suffice.
- */
-export type Accidental = "bb" | "b" | "" | "#" | "##";
-
-/**
- * Provides the pitch letter, accidental, and octave.
- */
-export type Pitch = {
-  letter: Letter;
-  accidental: Accidental;
-  octave: number;
-};
+import { Pitch } from "./pitch.ts";
 
 /**
  * Converts from a string to a pitch by parsing the SPN string.

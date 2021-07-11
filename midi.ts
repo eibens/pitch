@@ -1,4 +1,4 @@
-import { Accidental, Letter, parse, Pitch } from "./spn.ts";
+import { Accidental, Letter, Pitch } from "./pitch.ts";
 
 /**
  * Converts a pitch letter to a semitone offset within the C major scale.
@@ -61,14 +61,4 @@ export function fromPitch(pitch: Pitch) {
   return fromLetter(letter) +
     fromAccidental(accidental) +
     fromOctave(octave);
-}
-
-/**
- * Convert an SPN string to a MIDI pitch.
- *
- * @param pitch is a pitch in SPN.
- * @returns is the corresponding MIDI pitch.
- */
-export function fromString(pitch: string): number {
-  return fromPitch(parse(pitch));
 }
